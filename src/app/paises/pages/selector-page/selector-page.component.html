@@ -13,6 +13,17 @@
             </div>
         </div>
 
+        <div class="row mb-3">
+            <div class="col">
+                <label class="form-label">Pais</label>
+                <select class="form-control"
+                        formControlName="pais">
+                    <option value=""> --Seleccione pais--</option>
+                    <option [value]="pais.alpha3Code" *ngFor="let pais of paises">{{pais.name}}</option>
+                </select>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col">
                 <button class="btn btn-primary float-end">Seleccionar</button>

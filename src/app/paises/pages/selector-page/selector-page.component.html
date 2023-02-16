@@ -24,6 +24,17 @@
             </div>
         </div>
 
+        <div class="row mb-3">
+            <div class="col">
+                <label class="form-label">Frontera</label>
+                <select class="form-control"
+                        formControlName="frontera">
+                    <option value=""> --Seleccione pais fronterizo--</option>
+                    <option [value]="pais" *ngFor="let pais of fronterizos">{{pais}}</option>
+                </select>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col">
                 <button class="btn btn-primary float-end">Seleccionar</button>

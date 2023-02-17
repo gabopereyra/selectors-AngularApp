@@ -13,7 +13,7 @@
             </div>
         </div>
 
-        <div class="row mb-3">
+        <div class="row mb-3" *ngIf="paises.length != 0">
             <div class="col">
                 <label class="form-label">Pais</label>
                 <select class="form-control"
@@ -24,7 +24,7 @@
             </div>
         </div>
 
-        <div class="row mb-3">
+        <div class="row mb-3" *ngIf="fronterizos.length != 0">
             <div class="col">
                 <label class="form-label">Frontera</label>
                 <select class="form-control"
@@ -32,6 +32,14 @@
                     <option value=""> --Seleccione pais fronterizo--</option>
                     <option [value]="pais" *ngFor="let pais of fronterizos">{{pais}}</option>
                 </select>
+            </div>
+        </div>
+
+        <div class="row mb-3" *ngIf="cargando">
+            <div class="col">
+                <div class="alert alert-primary">
+                    Cargando...
+                </div>
             </div>
         </div>
 
